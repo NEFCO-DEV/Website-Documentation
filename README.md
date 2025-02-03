@@ -35,7 +35,7 @@ The Inventory Adjustments Dashboard is a web application designed to manage and 
 <br>
 
 # Nav Bar
-![full nav bar](image.png)
+![full nav bar](screenshots/image.png)
 ## Information Section
  - Title of Page
  - Current Date (NOT the date of the data being viewed)
