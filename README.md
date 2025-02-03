@@ -1,113 +1,212 @@
-# Inventory Adjustments Dashboard Documentation
+# New Inventory Adjustments Dashboard Features
 
 ## Table of Contents
-- [Inventory Adjustments Dashboard Documentation](#inventory-adjustments-dashboard-documentation)
-  - [Table of Contents](#table-of-contents)
+
 - [Overview](#overview)
-    - [Purpose](#purpose)
-- [Nav Bar](#nav-bar)
-  - [Information Section](#information-section)
-  - [Logo Button](#logo-button)
-  - [Menu/Settings](#menusettings)
-- [Data Filters](#data-filters)
-  - [Date Filter](#date-filter)
-    - [***SELECTING A NEW DATE WILL REFRESH THE DATA ON THE PAGE AND CLEAR ANY SELECTIONS!!***\[^1\]](#selecting-a-new-date-will-refresh-the-data-on-the-page-and-clear-any-selections1)
-  - [Location Filters](#location-filters)
-  - [Inventory Specific Filters](#inventory-specific-filters)
-  - [Clearing Filters](#clearing-filters)
+- [Navigation Bar](#navigation-bar)
+- [Filters](#filters)
 - [Tabs](#tabs)
 - [Statistics Cards](#statistics-cards)
-  - [Static Cards](#static-cards)
-  - [Dynamic Cards](#dynamic-cards)
 - [Table](#table)
-
-
+- [Data Manipulation](#data-manipulation)
 
 # Overview
-The Inventory Adjustments Dashboard is a web application designed to manage and track inventory adjustments across different branches. This documentation provides a comprehensive guide for users at all levels.
+
+![overview](screenshots/image-17.png)
+The Inventory Adjustments Dashboard is a web application designed to manage and track inventory adjustments across different branches. This documentation provides an overview of the new features available on this page.
+
 ### Purpose
+
 - Monitor and manage inventory adjustments
 - Review and approve adjustment entries
 - Track COGS (Cost of Goods Sold) changes
-- Generate insights through metrics and statistics  
-<br>
-<br>
-<br>
+- Generate insights through metrics and statistics
+  </br></br></br></br>
 
-# Nav Bar
-![full nav bar](screenshots/image.png)
+# Navigation Bar
+
+![full nav bar](screenshots/image-11.png)
+
 ## Information Section
- - Title of Page
- - Current Date (NOT the date of the data being viewed)
- - Last Refreshed (This will display the time the data on the page was last verified and checked against the server, currently automatically goes every 30 minutes)
-  
+
+![information section](screenshots/image-30.png)
+
+- Title of Page
+- Current Date (NOT the date of the data being viewed)
+- Last Refreshed (Updates every 30 minutes)
+
 ## Logo Button
-   - The **N in Motion** logo is a button that triggers a dropdown menu containing all available filters to manipulate the data, this funcitonality is covered in depth in the [Filters Section](#filters).
-   
+
+![logo button expanded](screenshots/image-29.png)
+
+- Triggers dropdown menu containing all available filters
+- Quick access to date selection
+- Region/Branch selection interface
+
 ## Menu/Settings
-   - Toggle Theme (dark/light mode)
-   - Export As CSV (exports the ***CURRENT TAB*** data only)
-   - *More features to come in the future (user profiles, bug reports, export as PDF, etc...)*
-<br>
-<br>
-<br>
 
-# Data Filters
-![filter section](image-7.png)
+![menu/settings](screenshots/image-31.png)
+
+- Triggers dropdown menu containing page options
+- Toggle Theme (dark/light mode)
+- Export options
+- Future features planned:
+  - User profiles
+  - Bug reporting
+  - PDF exports
+    </br></br></br></br>
+
+# Filters
+
+![filter section](screenshots/image-15.png)
+
 ## Date Filter
-![date filter](image-3.png)
-- Users can select a single date to look at or select 2 dates and see all data within that range.
-- If only one date is selected by the user, a dropdown will appear beneath the calendar to provide quick range selections. (see picture) 
-  <br>
-  ### <span style="color:orange">***SELECTING A NEW DATE WILL REFRESH THE DATA ON THE PAGE AND CLEAR ANY SELECTIONS!!***</span>[^1]
-## Location Filters
-![location filters](image-5.png)
-- Users can filter the retrieved data based on location in the following ways:
-    1. selecting a complete region
-    2. selecting specific branches from a specific region
-    3. selecting any combination of branches from any region it exists
-- Clicking the "All" region button is a way to remove any location filters since the default view includes all branches.
-## Inventory Specific Filters
-![inventory data filter](image-6.png)
-- Users can filter the data based on fields specific to the Inventory Dashboard as well:
-    1. COGS minimum value
-    2. Buy Line
-    3. Prince Line
-    4. Adjuster
-    5. GL Product Type 
-    6. Primary Code (Reviewed Tab ***ONLY***)
-## Clearing Filters
-- There are 2 buttons to clear filters, this is  because clearing the date filter will refresh, and fetch a brand new set of data to manipulate.
-- meanwhile, clearing the other filters just resets the current data set to its most basic form.
-<br>
-<br>
-<br>
 
-# Tabs
-![tabs](image-8.png)
--Just something basic about how the data is completely separated into tabs based on the adjustment status, there is no overlap between tabs and when an item is reviewed, or unreviewed, it is immediately removed from the current tab made available in it s new location.
+![date button](screenshots/image-32.png)
+</br>
+
+![date filter](screenshots/image-3.png)
+
+- If only one date is selected by the user, a dropdown will appear beneath the calendar to provide quick range selections. (see picture)
+- Single date or date range selection
+- Quick range selection dropdown
+
+> [!WARNING]
+> Date changes trigger data refresh and clear selections.
+
+## Location Filters
+
+![location filters](screenshots/image-14.png)
+**Filter options:**
+
+1. Complete region selection
+2. Specific branches within a region
+3. Custom branch combinations across regions
+
+## Inventory Specific Filters
+
+![inventory data filter](screenshots/image-12.png)
+Available filters:
+
+1. COGS minimum value
+2. Buy Line
+3. Price Line
+4. Adjuster
+5. GL Product Type
+6. Primary Code (Reviewed Tab only)
+
+## Clearing Filters
+
+![clear filters](screenshots/image-18.png)
+
+- Date filter clear: Refreshes data pool from server
+- Other filters clear: Resets currently applied filters to dataset view
+  </br></br></br></br>
 
 # Statistics Cards
+
 ## Static Cards
-![static cards](image-9.png)
-- These cards are available under a dropdown, and can either show YTD or MTD values, these values are only refreshed on the inital page load and are not affected by any filters, or selections made on the page by the user
+
+![static cards](screenshots/image-9.png)
+
+- MTD/YTD toggle
+- Refresh on initial page load only
+- Not affected by filters
+
 ## Dynamic Cards
-![dynamic cards (reviewed)](image-10.png)
-- These cards are always visible under the tab switcher, depending on hte tab selected, the cards may change to show data relevant to the current tab.
-- These cards are dynamic and are reflects of the active data, if a filter is applied to the data, it will also change teh values in the cards
-- these cards are not only affected by filter selections, but also item selections, if you select 2 items from the table, the cards will only reflect the data you have selected.
-<br>
-<br>
-<br>
+
+![dynamic cards (reviewed)](screenshots/image-10.png)
+
+- Tab-specific metrics
+- Filter-sensitive calculations
+- Selection-aware updates
+- Real-time data reflection
+  </br></br></br></br>
+
+# Tabs
+
+![tabs](screenshots/image-8.png)
+
+- There are two tabs that completely separate the data based on their adjustment status.
+- As items are reviewed or sent back to unreviewed, they will immediately be removed from the current tab, and appear in their new tab.
+  </br></br></br></br>
 
 # Table
-Table Features:
-  - sorting by column
-  - searching all words
-  - rows per page
-  - column rearrange
-  - item selection
-  - pagination
-  - 
 
-[^1]: The data is refreshed from the server in 3 situations ***only***: initial page load, auto-refreshes, and changing of the date... all other operations just alter the fetched data for the given range. 
+![alt text](screenshots/image-19.png)
+
+## Pagination Controls
+
+![rows per page](screenshots/image-23.png)
+![pagination](screenshots/image-22.png)
+
+- Adjustable rows per page
+- Page navigation
+- Total entries counter
+- Selection count indicator
+
+## Core Features
+
+![view columns buttons](screenshots/image-33.png)
+</br>
+
+![column reorder](screenshots/image-20.png)
+
+- Column Customization
+
+  - Show/hide columns
+  - Reorder columns via drag-and-drop
+
+- Data Organization
+
+  - Sort by any column (click column header)
+  - Global search across all columns
+  - Per-column filtering
+
+- Row Operations
+  ![row operations](screenshots/image-21.png)
+  - Single row selection
+  - Multi-row selection
+  - Bulk actions on selected rows
+  - Row hover previews
+    </br></br></br></br>
+
+# Data Manipulation
+
+## Single Entry Editing
+
+![edit button](screenshots/image-34.png)
+</br>
+
+![single entry](screenshots/image-25.png)
+
+- Edit button triggers modal form
+- Required fields validation
+- Field-specific rules and constraints
+- Real-time validation feedback
+
+## Bulk Operations
+
+![bulk edit button](screenshots/image-35.png)
+</br>
+![bulk entry](screenshots/image-26.png)
+
+- Select multiple entries
+- Available bulk actions:
+  - Status updates
+  - Limited primary code assignment
+  - Notes addition
+  - Group operations
+
+## Group Entry Management
+
+![group management](screenshots/image-28.png)
+<br>
+
+> [!IMPORTANT]
+> Feature only present in Offsetting and Previous adjustments
+
+- Create entry groups
+- Add/remove entries from groups
+- Group validation rules
+- Offset ledger functionality
